@@ -12,23 +12,10 @@ import org.springframework.context.annotation.Bean;
 public class SpringDataJpaPrApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(SpringDataJpaPrApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner run(CustomerRepository customerRepository){
-        return args -> {
-            insertEmployee(customerRepository);
-        };
-    }
-    private void insertEmployee(CustomerRepository customerRepository){
-        Customer customer = Customer.builder()
-                .name("long")
-                .email("s2taaa@gmail.com")
-                .age(21)
-                .build();
-        customerRepository.save(customer);
 
-    }
 
 }

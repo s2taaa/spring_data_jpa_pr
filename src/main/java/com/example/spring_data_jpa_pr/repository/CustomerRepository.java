@@ -15,7 +15,7 @@ public interface CustomerRepository extends CrudRepository<Customer,Long> {
     @Query("select c from Customer c")
     List<Customer> getAll();
 
-    @Query("select c from Customer c where p.name = 'long'")
+    @Query("select c from Customer c where c.name = 'long'")
     List<Customer> getListByName(String name);
 
     @Transactional

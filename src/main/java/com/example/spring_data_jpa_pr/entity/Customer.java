@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "tbl_customer")
 public class Customer {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
